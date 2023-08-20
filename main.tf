@@ -9,7 +9,7 @@ module "vpc" {
 
 }
 
-output "subnets_id" {
+output "vpc" {
   value = module.vpc
 }
 
