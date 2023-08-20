@@ -10,9 +10,6 @@ module "vpc" {
 }
 
 output "subnets_id" {
-  value = module.vpc.subnet_main
+  value = module.vpc
 }
 
-output "routetable_id" {
-  value = module.vpc.routetable_id
-}
