@@ -14,20 +14,6 @@ module "vpc" {
 
 }
 
-module "alb" {
-
-  source = "git::https://github.com/hemanthtadikonda/tf-module-alb.git"
-
-  for_each = var.alb
-  lb_type  = each.value ["lb_type"]
-  internal = each.value["internal"]
-  sg_group = each.value["sg_group"]
-  sg_port  = var.sg_port
-  tags     = var.tags
-  env      = var.env
-
-
-}
 
 
 output "vpc" {
