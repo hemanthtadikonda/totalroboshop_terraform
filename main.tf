@@ -20,7 +20,9 @@ module "alb" {
   for_each = var.alb
   lb_type  = each.value ["lb_type"]
   internal = each.value["internal"]
-  sg_group = each.value["sg_group"]
+  vpc_id   = each.value["internal"] ? local.vpc_id : var.default_vpc_id
+  sg_cidr_blocks = each.value["sg_cidr_blocks"]
+  subnets = each.value["internal"] ? local.app_subnets : data.aws_subnets.subnets.ids
   sg_port  = var.sg_port
   tags     = var.tags
   env      = var.env
@@ -31,7 +33,5 @@ module "alb" {
 
 
 
-output "vpc" {
-  value = module.vpc
-}
+
 
