@@ -31,3 +31,19 @@ tags = {
   created_by    = "terraform"
 }
 
+sg_port = 80
+alb  = {
+  public = {
+    internal = false
+    lb_type  = "application"
+    sg_group = [0.0.0.0/0]
+
+
+  }
+  private = {
+    internal = false
+    lb_type  = "application"
+    sg_group = ["10.0.0.0/16","172.31.0.0/16"]
+
+  }
+}
