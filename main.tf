@@ -9,7 +9,7 @@ module "vpc" {
   default_cidr   = var.default_cidr
   default_route_table_id = var.default_route_table_id
   tags     = var.tags
-  evv      = var.env
+  env      = var.env
 
 
 }
