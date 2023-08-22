@@ -22,3 +22,12 @@ default_vpc_id = "vpc-05642ce42b99a7fae"
 default_cidr   = "172.31.0.0/16"
 default_route_table_id = "rtb-0dbc8b1b5e435955e"
 
+env  = "dev"
+tags = {
+  company_name  = "ABC tech"
+  business_unit = "ecommerce"
+  project_name  = "robotshop"
+  cost_centrt   = "ecom rs"
+  created_by    = "terraform"
+}
+

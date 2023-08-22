@@ -8,6 +8,8 @@ module "vpc" {
   default_vpc_id = var.default_vpc_id
   default_cidr   = var.default_cidr
   default_route_table_id = var.default_route_table_id
+  tags     = var.tags
+  evv      = var.env
 
 
 }
