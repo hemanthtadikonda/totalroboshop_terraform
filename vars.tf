@@ -6,7 +6,4 @@ variable "tags" {}
 variable "env" {}
 
 variable "alb" {}
-variable "internal" {}
-variable "lb_type" {}
-variable "sg_cidr_blocks" {}
 variable "sg_port" {}
