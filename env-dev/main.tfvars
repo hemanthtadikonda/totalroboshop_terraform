@@ -36,7 +36,7 @@ alb  = {
   public = {
     internal = false
     lb_type  = "application"
-    sg_group = [0.0.0.0/0]
+    sg_group = ["0.0.0.0/16"]
 
 
   }
