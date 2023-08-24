@@ -40,7 +40,9 @@ module "docdb" {
   skip_final_snapshot     = each.value["skip_final_snapshot"]
   vpc_id                  = local.vpc_id
   cidr_blocks             = local.db_subnets_cidr_block
-
+  instance_class          = each.value["instance_class"]
+  instance_count          = each.value["instance_count"]
+  engine_version          = each.value["engine_version"]
 }
 
 
