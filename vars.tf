@@ -6,4 +6,3 @@ variable "tags" {}
 variable "env" {}
 
 variable "alb" {}
-variable "sg_port" {}

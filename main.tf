@@ -23,7 +23,7 @@ module "alb" {
   vpc_id   = each.value["internal"] ? local.vpc_id : var.default_vpc_id
   sg_cidr_blocks = each.value["sg_cidr_blocks"]
   subnets = each.value["internal"] ? local.app_subnets : data.aws_subnets.subnets.ids
-  sg_port  = var.sg_port
+  sg_port  = each.value["sg_port"]
   tags     = var.tags
   env      = var.env
 

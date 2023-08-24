@@ -1,3 +1,18 @@
+default_vpc_id = "vpc-05642ce42b99a7fae"
+default_cidr   = "172.31.0.0/16"
+default_route_table_id = "rtb-0dbc8b1b5e435955e"
+
+
+env  = "dev"
+
+tags = {
+  company_name  = "ABC tech"
+  business_unit = "ecommerce"
+  project_name  = "robotshop"
+  cost_centrt   = "ecom rs"
+  created_by    = "terraform"
+}
+
 vpc = {
   main = {
     cidr = "10.0.0.0/16"
@@ -18,31 +33,19 @@ vpc = {
   }
 }
 
-default_vpc_id = "vpc-05642ce42b99a7fae"
-default_cidr   = "172.31.0.0/16"
-default_route_table_id = "rtb-0dbc8b1b5e435955e"
 
-
-env  = "dev"
-tags = {
-  company_name  = "ABC tech"
-  business_unit = "ecommerce"
-  project_name  = "robotshop"
-  cost_centrt   = "ecom rs"
-  created_by    = "terraform"
-}
-
-sg_port = 80
 alb  = {
   public = {
     internal = false
     lb_type  = "application"
     sg_cidr_blocks = ["0.0.0.0/16"]
+    sg_port = 80
   }
   private = {
     internal = true
     lb_type  = "application"
     sg_cidr_blocks = ["10.0.0.0/16", "172.31.0.0/16"]
+    sg_port = 80
   }
 }
 
