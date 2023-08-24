@@ -39,11 +39,13 @@ module "docdb" {
   preferred_backup_window = each.value["preferred_backup_window"]
   skip_final_snapshot     = each.value["skip_final_snapshot"]
   vpc_id                  = local.vpc_id
-  sg_ingress_cidr         = local.app_subnets_cidr_block
+  cidr_blocks             = local.app_subnets_cidr_block
   instance_class          = each.value["instance_class"]
   instance_count          = each.value["instance_count"]
   engine_version          = each.value["engine_version"]
   family                  = each.value["family"]
+  env                     = var.env
+  tags                    = var.tags
 }
 
 
