@@ -66,7 +66,7 @@ rds = {
     rds_type       = "mysql"
     ingres_port    = 3306
     engine         = "aurora-mysql"
-    family         = "auroara-mysql5.7"
+    family         = "aurora-mysql5.7"
     engine_version = "5.7mysql_aurora.2.11.3"
     backup_retention_period = 5
     preferred_backup_window = "07:00-09:00"
@@ -87,5 +87,4 @@ elasticache = {
   }
 }
 
-elasticache_type = "redis"
 
