@@ -76,4 +76,16 @@ rds = {
   }
 }
 
+elasticache = {
+  main = {
+    pg_family = "redis6.x"
+    engine    = "redis"
+    dbport    = 6379
+    node_type = "cache.t3.micro"
+    num_cache_nodes = 1
+    engine_version  = "6.2"
+  }
+}
+
+elasticache_type = "redis"
 
