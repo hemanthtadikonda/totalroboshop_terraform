@@ -1,6 +1,8 @@
-default_vpc_id = "vpc-05642ce42b99a7fae"
-default_cidr   = "172.31.0.0/16"
+default_vpc_id         = "vpc-05642ce42b99a7fae"
+default_cidr           = "172.31.0.0/16"
 default_route_table_id = "rtb-0dbc8b1b5e435955e"
+ssh_ingress_cidr       = "172.31.94.218/32"
+zone_id                = "Z09760323G7SC2VABFTOY"
 
 
 env  = "dev"
@@ -87,4 +89,8 @@ elasticache = {
   }
 }
 
-
+rabbitmq  = {
+  main = {
+    instance_type = "t3.micro"
+  }
+}

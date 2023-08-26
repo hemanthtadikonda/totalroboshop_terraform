@@ -4,6 +4,9 @@ variable "default_cidr" {}
 variable "default_route_table_id" {}
 variable "tags" {}
 variable "env" {}
+variable "zone_id" {}
+variable "ssh_ingress_cidr" {}
+
 
 variable "alb" {}
 
@@ -12,3 +15,5 @@ variable "docdb" {}
 variable "rds" {}
 
 variable "elasticache" {}
+
+variable "rabbitmq" {}
