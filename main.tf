@@ -11,7 +11,6 @@ module "vpc" {
   tags     = var.tags
   env      = var.env
 
-
 }
 module "alb" {
 
@@ -26,8 +25,6 @@ module "alb" {
   sg_port  = each.value["sg_port"]
   tags     = var.tags
   env      = var.env
-
-
 }
 
 module "docdb" {
@@ -89,7 +86,6 @@ module "elasticache" {
   node_type       = each.value["node_type"]
   num_cache_nodes = each.value["num_cache_nodes"]
   engine_version  = each.value["engine_version"]
-
 }
 
 
