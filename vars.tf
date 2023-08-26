@@ -1,4 +1,3 @@
-variable "vpc" {}
 variable "default_vpc_id" {}
 variable "default_cidr" {}
 variable "default_route_table_id" {}
@@ -7,6 +6,8 @@ variable "env" {}
 variable "zone_id" {}
 variable "ssh_ingress_cidr" {}
 
+
+variable "vpc" {}
 
 variable "alb" {}
 
