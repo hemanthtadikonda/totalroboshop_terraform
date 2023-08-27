@@ -1,3 +1,3 @@
-outputs "alb" {
+output "alb" {
   value = module.alb
 }
