@@ -27,28 +27,21 @@ module "alb" {
   env      = var.env
 }
 
-module "apps" {
-  source = "git::https://github.com/hemanthtadikonda/tf-module-apps.git"
+module "rabbitmq" {
+  source = "giit::https://github.com/hemanthtadikonda/tf-module-rabbitmq.git"
 
-  for_each = var.apps
+  for_each         = var.rabbitmq
 
   env              = var.env
   tags             = var.tags
-  ssh_ingress_cidr = var.ssh_ingress_cidr
   zone_id          = var.zone_id
+  ssh_ingress_cidr = var.ssh_ingress_cidr
 
-  vpc_id            = local.vpc_id
-  sg_ingress_cidr   = local.app_subnets_cidr_block
-  private_alb_dns   = local.private_alb_dns
-  app_subnet_ids    = local.app_subnets
+  sg_ingress_cidr  = local.app_subnets_cidr_block
+  subnet_ids       = local.db_subnets
+  vpc_id           = local.vpc_id
 
-
-  component         = each.key
-  app_port          = each.value["app_port"]
-  instance_type     = each.value["instance_type"]
-  desired_capacity  = each.value["desired_capacity"]
-  max_size          = each.value["max_size"]
-  min_size          = each.value["min_size"]
+  instance_type    = each.value["instance_type"]
 }
 
 
