@@ -5,4 +5,6 @@ locals {
   db_subnets = [for k, v in lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), "db", null), "subnet_ids", null) : v.id]
 
   app_subnets_cidr_block = [for k, v in lookup(lookup(lookup(lookup(module.vpc, "main", null), "subnets", null), "app", null), "subnet_ids", null) : v.cidr_block]
+
+  private_alb_dns = lookup(lookup(lookup(module.alb, "private" , null), "alb" , null) , "dns_name" ,null)
 }
