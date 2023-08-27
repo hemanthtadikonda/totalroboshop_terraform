@@ -1,3 +1,2 @@
 output "alb" {
-  value = module.alb
-}
+  value = lookup(module.alb , "alb" , null}
