@@ -120,9 +120,6 @@ module "apps" {
   app_subnet_ids    = local.app_subnets
   listener_arn      = local.private_lb_arn
 
-
-
-
   component         = each.key
   app_port          = each.value["app_port"]
   instance_type     = each.value["instance_type"]
@@ -130,8 +127,6 @@ module "apps" {
   max_size          = each.value["max_size"]
   min_size          = each.value["min_size"]
   lb_priority       = each.value["lb_priority"]
-
-
 }
 
 
