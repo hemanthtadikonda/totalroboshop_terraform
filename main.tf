@@ -41,6 +41,7 @@ module "apps" {
   sg_ingress_cidr   = local.app_subnets_cidr_block
   private_alb_dns   = local.private_alb_dns
   app_subnet_ids    = local.app_subnets
+  listener_arn      = local.private_lb_arn
 
 
 
@@ -51,6 +52,7 @@ module "apps" {
   desired_capacity  = each.value["desired_capacity"]
   max_size          = each.value["max_size"]
   min_size          = each.value["min_size"]
+  lb_priority       = each.value["lb_priority"]
 
 
 }
