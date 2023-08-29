@@ -37,7 +37,7 @@ module "apps" {
   tags             = var.tags
   ssh_ingress_cidr = var.ssh_ingress_cidr
   zone_id          = var.zone_id
-  default_vpc_id   = var.default_vpc_id
+
 
   vpc_id                 = local.vpc_id
   sg_ingress_cidr        = local.app_subnets_cidr_block
