@@ -88,7 +88,7 @@ module "elasticache" {
 }
 
 module "rabbitmq" {
-  source = "giit::https://github.com/hemanthtadikonda/tf-module-rabbitmq.git"
+  source = "git::https://github.com/hemanthtadikonda/tf-module-rabbitmq.git"
 
   for_each         = var.rabbitmq
 
