@@ -43,7 +43,7 @@ module "apps" {
   sg_ingress_cidr        = local.app_subnets_cidr_block
   private_alb_dns        = local.private_alb_dns
   app_subnet_ids         = local.app_subnets
-  private_listener_arn   = local.private_lb_arn
+  listener_arn           = local.private_lb_arn
 
 
   component         = each.key
