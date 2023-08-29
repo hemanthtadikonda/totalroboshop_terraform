@@ -113,12 +113,16 @@ module "apps" {
   tags             = var.tags
   ssh_ingress_cidr = var.ssh_ingress_cidr
   zone_id          = var.zone_id
+  default_vpc_id   = var.default_vpc_id
 
-  vpc_id            = local.vpc_id
-  sg_ingress_cidr   = local.app_subnets_cidr_block
-  private_alb_dns   = local.private_alb_dns
-  app_subnet_ids    = local.app_subnets
-  listener_arn      = local.private_lb_arn
+  vpc_id                 = local.vpc_id
+  sg_ingress_cidr        = local.app_subnets_cidr_block
+  private_alb_dns        = local.private_alb_dns
+  app_subnet_ids         = local.app_subnets
+  private_listener_arn   = local.private_lb_arn
+  public_alb_dns         = local.public_alb_dns
+  public_listener_arn    = local.public_lb_arn
+
 
   component         = each.key
   app_port          = each.value["app_port"]
