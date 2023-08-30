@@ -40,7 +40,7 @@ alb  = {
   public = {
     internal = false
     lb_type  = "application"
-    sg_cidr_blocks = ["0.0.0.0/16"]
+    sg_cidr_blocks = ["0.0.0.0/0"]
     sg_port = 80
   }
   private = {
