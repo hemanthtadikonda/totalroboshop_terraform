@@ -120,6 +120,7 @@ module "apps" {
   ssh_ingress_cidr = var.ssh_ingress_cidr
   zone_id          = var.zone_id
   default_vpc_id   = var.default_vpc_id
+  monitor_ingress_cidr = var.monitor_ingress_cidr
 
 
   vpc_id                 = local.vpc_id

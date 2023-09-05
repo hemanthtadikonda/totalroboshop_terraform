@@ -5,6 +5,7 @@ variable "tags" {}
 variable "env" {}
 variable "zone_id" {}
 variable "ssh_ingress_cidr" {}
+variable "monitor_ingress_cidr" {}
 
 
 variable "vpc" {}
