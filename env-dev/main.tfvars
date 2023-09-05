@@ -2,7 +2,7 @@ default_vpc_id         = "vpc-05642ce42b99a7fae"
 default_cidr           = "172.31.0.0/16"
 default_route_table_id = "rtb-0dbc8b1b5e435955e"
 ssh_ingress_cidr       = ["172.31.94.218/32"]
-monitor_ingress_cidr   = ["172.31.89.15/32"]
+monitor_ingress_cidr   = ["172.31.84.43/32"]
 zone_id                = "Z09760323G7SC2VABFTOY"
 
 
