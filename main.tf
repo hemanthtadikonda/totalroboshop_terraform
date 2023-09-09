@@ -116,7 +116,7 @@ module "apps" {
   for_each = var.apps
 
   env              = var.env
-  tags             = var.tags
+  tags             = merge(var.tags , each.value["tags"])
   ssh_ingress_cidr = var.ssh_ingress_cidr
   zone_id          = var.zone_id
   default_vpc_id   = var.default_vpc_id

@@ -105,6 +105,7 @@ apps = {
     min_size         = 1
     lb_priority      = 1
     parameters       = []
+    tags             = {Monitor_nginx = "yes"}
   }
   catalogue = {
     app_port         = 8080
@@ -114,6 +115,7 @@ apps = {
     min_size         = 1
     lb_priority      = 2
     parameters       = ["docdb"]
+    tags             = {}
   }
   user  = {
     app_port         = 8080
@@ -123,6 +125,7 @@ apps = {
     min_size         = 1
     lb_priority      = 3
     parameters       = ["docdb"]
+    tags             = {}
   }
   cart = {
     app_port         = 8080
@@ -132,6 +135,7 @@ apps = {
     min_size         = 1
     lb_priority      = 4
     parameters       = []
+    tags             = {}
   }
   shipping = {
     app_port         = 8080
@@ -141,6 +145,7 @@ apps = {
     min_size         = 1
     lb_priority      = 5
     parameters       = ["rds"]
+    tags             = {}
   }
   payment = {
     app_port         = 8080
@@ -150,6 +155,7 @@ apps = {
     min_size         = 1
     lb_priority      = 6
     parameters       = ["rabbitmq"]
+    tags             = {}
   }
 
 }
