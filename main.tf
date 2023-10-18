@@ -151,6 +151,9 @@ module "eks" {
 
   cluster_endpoint_public_access = false
 
+  cluster_name    = "dev-roboshop"
+  cluster_version = "1.28"
+
   cluster_addons = {
     coredns = {
       most_recent = true
@@ -184,7 +187,7 @@ resource "aws_security_group_rule" "https-to-eks" {
   from_port         = 443
   to_port           = 443
   protocol          = "tcp"
-  cidr_blocks       = [var.ssh_ingress_cidr]
+  cidr_blocks       = var.ssh_ingress_cidr
   security_group_id = module.eks.cluster_security_group_id
 }
 
