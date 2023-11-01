@@ -224,7 +224,7 @@ resource "aws_iam_role" "eks-ssm" {
             "ssm:GetParameterHistory",
             "ssm:GetParametersByPath",
             "ssm:GetParameters",
-            "ssm:GetParameter"
+            "ssm:GetParameter",
             "ssm:GetParameter action"
           ],
           "Resource" : "*"
